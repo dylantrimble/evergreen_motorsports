@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300&family=Signika+Negative:wght@300&display=swap');
+
+body {
+  text-align: center;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: 'Bebas Neue', cursive;
+}
+
+html {
+  /* this makes sure the padding and the border is included in the box sizing */
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+html body {
+  padding: 0;
+  margin: 0;
+  overflow-y: inherit;
+}
