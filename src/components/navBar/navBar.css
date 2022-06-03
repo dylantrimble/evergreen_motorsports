@@ -4,8 +4,8 @@ body{
 
 .nav-bar {
     width: 100vw;
-    padding-bottom: 1em;
-    height: 10em;
+    padding-bottom: 0em;
+    height: 9em;
 }
 
 .icon-wrapper {
@@ -59,7 +59,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* toggle hamburger menu on and off */
@@ -76,10 +76,10 @@ body{
 
 .menu-wrap .hamburger {
     position: absolute;
-    top: 4em;
+    top: 5em;
     left: 0;
     z-index: 1;
-    width: 60px;
+    width: 6em;
     height: 60px;
     padding: 1rem;
     display: flex;
@@ -223,6 +223,7 @@ body{
 
 .promo-code {
     font-size: 1em;
+    margin: 0;
     padding-left: 5em;
 }
 

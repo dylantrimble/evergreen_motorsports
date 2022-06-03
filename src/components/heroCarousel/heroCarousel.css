@@ -1,0 +1,26 @@
+img {
+    margin-top: 0;
+
+}
+
+.mobile-hero{
+    background-image: url(../../images/home-imgs/E36-EGM-Hero.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 30em;
+}
+
+.desktop-hero{
+    display: none;
+}
+
+@media screen and (min-width: 800px){
+    .mobile-hero{
+        display: none;
+    }
+    .desktop-hero{
+        display: block;
+    }
+}

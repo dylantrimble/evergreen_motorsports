@@ -10,6 +10,7 @@ import Cart from './pages/cart';
 import Products from './pages/products'
 import Contact from "./pages/contact";
 
+
 const root = ReactDOM.createRoot(
   document.getElementById("root")
 );
