@@ -6,11 +6,12 @@ import ProductCard from '../components/productCard/ProductCard';
 
 function products() {
   const items = useStoreState(state => state.products);
-  console.log(items);
+  // console.log(items);
   return (
     <>
       <NavBar/>
-      <img className="prod-hero" src="/images/home-imgs/EGM-Long-Logo-Slap-HKS.png"/>
+      <img className="prod-hero-dt" src="/images/home-imgs/EGM-Long-Logo-Slap-HKS.png" alt='EGM logo'/>
+      <div className="prod-hero-mobile"></div>
       <div className="prod-container">
         {items.map(item => (
           <ProductCard

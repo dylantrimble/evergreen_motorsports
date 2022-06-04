@@ -2,8 +2,8 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./heroCarousel.css"
 import { Carousel } from 'react-bootstrap'
-import tandemHero from "../../images/home-imgs/Tandem.jpeg"
-import chelseaHero from "../../images/home-imgs/CD-BC-Coilovers.png"
+const tandemHero = "/images/home-imgs/Tandem.jpeg"
+const chelseaHero = "/images/home-imgs/CD-BC-Coilovers.png"
 
 function HeroCarousel() {
     return (
@@ -13,8 +13,8 @@ function HeroCarousel() {
                 <Carousel.Item interval={10000}>
                     <img
                         className="d-block w-100"
-                        src={tandemHero}
-                        alt="First slide"
+                        src={process.env.PUBLIC_URL + tandemHero}
+                        alt="3 car tandem, Final Bout"
                     />
                     <Carousel.Caption>
                         <h3>Stay Sideways!!</h3>
@@ -24,8 +24,8 @@ function HeroCarousel() {
                 <Carousel.Item interval={10000}>
                     <img
                         className="d-block w-100"
-                        src={chelseaHero}
-                        alt="Second slide"
+                        src={process.env.PUBLIC_URL + chelseaHero}
+                        alt="Chelsea Denofa, BC racing add"
                     />
                     <Carousel.Caption>
                         <h3>Save 20% on BC-BR Coilovers</h3>

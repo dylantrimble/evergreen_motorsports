@@ -1,15 +1,17 @@
 img {
     margin-top: 0;
-
+    max-height: 28.5em;
 }
 
 .mobile-hero{
-    background-image: url(../../images/home-imgs/E36-EGM-Hero.png);
+    background-image: url(/images/home-imgs/E36-EGM-Hero.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
     height: 30em;
+    position: relative;
+    top:8em
 }
 
 .desktop-hero{
@@ -22,5 +24,7 @@ img {
     }
     .desktop-hero{
         display: block;
+        position: relative;
+        top:8em;
     }
 }

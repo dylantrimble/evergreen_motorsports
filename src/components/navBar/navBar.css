@@ -1,4 +1,4 @@
-body{
+body {
     overflow-x: hidden;
 }
 
@@ -16,9 +16,10 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-.egm-icon{
+
+.egm-icon {
     display: inline-block;
-    background-image: url(../../images/home-imgs/EGM-Box-Logo2.png);
+    background-image: url(/images/home-imgs/EGM-Box-Logo2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,25 +28,66 @@ body{
     margin: .5em .5em .5em;
 }
 
-.shop-cart-icon {
-  color: whitesmoke; 
-  font-size: 3em;
-  margin: 0;
-  padding: 0; 
+.right-nav {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
-.cart-icon{
+
+.search-form-dt {
+    display: none;
+}
+.search-form-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 25%;
+    top: 10em;
+    z-index: 2;
+}
+
+.search {
+    height: 2em;
+    border-radius: .5em;
+    margin: .3em;
+}
+
+.search-btn {
+    background-color: rgb(86, 98, 87);
+    color: whitesmoke;
+    width: 5em;
+}
+
+.search-box {
+    width: 10em;
+    padding-left: .3em;
+}
+
+.shop-cart-icon {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-icon,
+.cart-icon:hover {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: whitesmoke;
     background-color: rgb(173, 49, 49);
-    height: 80px;
-    width: 12em;
-    margin:0em 2em 0em;
+    height: 4em;
+    width: 10em;
+    margin: 0em 1em 0em;
 }
 
-.nav-wrap{
+.nav-wrap {
     background-color: rgb(80, 80, 80);
     height: 4em;
     display: flex;
@@ -92,7 +134,7 @@ body{
 /* Hamburger Lines*/
 
 /* middle line */
-.menu-wrap .hamburger > div {
+.menu-wrap .hamburger>div {
     position: relative;
     width: 100%;
     height: 2px;
@@ -104,7 +146,8 @@ body{
 }
 
 /* top and bottom lines, showing top  line first */
-.menu-wrap .hamburger > div:before, .menu-wrap .hamburger > div:after {
+.menu-wrap .hamburger>div:before,
+.menu-wrap .hamburger>div:after {
     content: '';
     position: absolute;
     z-index: 1;
@@ -115,57 +158,60 @@ body{
 }
 
 /* bottom line styled */
-.menu-wrap .hamburger > div:after {
+.menu-wrap .hamburger>div:after {
     top: 10px;
 }
 
-/* Toggler Animation */ 
+/* Toggler Animation */
 
-.menu-wrap .toggler:checked + .hamburger > div{
+.menu-wrap .toggler:checked+.hamburger>div {
     transform: rotate(135deg);
 
 }
 
 /*Turn Lines into  X*/
 
-.menu-wrap .toggler:checked + .hamburger > div::before, .menu-wrap .toggler:checked + .hamburger > div:after {
+.menu-wrap .toggler:checked+.hamburger>div::before,
+.menu-wrap .toggler:checked+.hamburger>div:after {
     top: 0;
     transform: rotate(90deg)
 }
-.toggler:checked + .hamburger  {
+
+.toggler:checked+.hamburger {
     top: 0;
     left: 0;
 }
+
 .toggler:checked {
     top: 0;
     left: 0;
 }
 
 /* Rotate on hover when checked */
-.menu-wrap .toggler:checked:hover + .hamburger > div {
+.menu-wrap .toggler:checked:hover+.hamburger>div {
     transform: rotate(225deg);
 }
 
 /* Show Menu */
 
-.menu-wrap .toggler:checked ~ .menu {
+.menu-wrap .toggler:checked~.menu {
     visibility: visible;
 
 }
 
-.menu-wrap .toggler:checked ~ .menu > div {
+.menu-wrap .toggler:checked~.menu>div {
     transform: scale(1);
-    transition-duration: all 0.5s ease ;
+    transition-duration: all 0.5s ease;
 }
 
-.menu-wrap .toggler:checked ~ .menu > div > div {
+.menu-wrap .toggler:checked~.menu>div>div {
     opacity: 1;
     transition: opacity 0.4s ease
 }
 
-.menu-wrap .menu{
+.menu-wrap .menu {
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     /* width: 100%; */
     height: 100%;
@@ -176,7 +222,7 @@ body{
     justify-content: center;
 }
 
-.menu-wrap .menu > div{
+.menu-wrap .menu>div {
     background: rgb(86, 98, 87);
     /* border-radius: 30%; */
     width: 15em;
@@ -191,7 +237,7 @@ body{
     z-index: 3;
 }
 
-.menu-wrap .menu > div > div {
+.menu-wrap .menu>div>div {
     text-align: center;
     max-width: 90vw;
     max-height: 100vh;
@@ -199,24 +245,25 @@ body{
     transition: opacity 0.4s ease;
 
 }
-.menu-wrap .menu > div > div > ul {
+
+.menu-wrap .menu>div>div>ul {
     padding-left: 0;
 }
 
-.menu-wrap .menu > div > div > ul > li {
+.menu-wrap .menu>div>div>ul>li {
     list-style: none;
     color: whitesmoke;
     font-size: 1.5rem;
     padding: 1rem;
 }
 
-.menu-wrap .menu > div > div > ul > li > a {
+.menu-wrap .menu>div>div>ul>li>a {
     color: inherit;
     text-decoration: none;
     transition: color 0.4s ease;
 }
 
-.menu-wrap .menu > div > div > ul > li > a:hover {
+.menu-wrap .menu>div>div>ul>li>a:hover {
     color: rgba(224, 168, 0, 1);
     padding: .4rem 1.1rem;
     border-radius: 15%;
@@ -230,17 +277,40 @@ body{
 }
 
 
-@media screen and (min-width: 460px){
+@media screen and (min-width: 460px) {
     .promo-code {
         font-size: 1em;
         padding-left: 2em;
     }
 }
 
-@media screen and (min-width: 800px){
-    .promo-code{
+@media screen and (min-width: 756px) {
+    .promo-code {
         font-size: 2em;
         padding-left: 0em;
+    }
+    .search-form-mobile {
+        display: none;
+    }
+    .search-form-dt {
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .search {
+        height: 2.5em;
+        margin: .5em;
+    }
+
+    .search-btn {
+        width: 7em;
+    }
+
+    .search-box {
+        width: 15em;
+        padding-left: .5em;
     }
 
 }

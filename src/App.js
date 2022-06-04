@@ -9,7 +9,8 @@ function App() {
     <div className="App">
       <NavBar/>
       <HeroCarousel/>
-      <div>App</div>
+      <div className='featured-products'>Featured Products</div>
+      <div>testing</div>
     </div>
   );
 }

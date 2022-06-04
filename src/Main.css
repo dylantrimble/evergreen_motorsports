@@ -3,7 +3,6 @@
 body {
   text-align: center;
   overflow-x: hidden;
-  /* overflow-y: scroll; */
 }
 
 * {
@@ -13,7 +12,6 @@ body {
 html {
   /* this makes sure the padding and the border is included in the box sizing */
   box-sizing: border-box;
-  /* overflow-y: hidden; */
 }
 
 html body {
@@ -21,33 +19,62 @@ html body {
   margin: 0;
   overflow-y: inherit;
 }
-.prod-hero {
-  padding-top: 8em;
-  height:20em;
-  width: 100vw;
+
+/* App.js / Home Page */
+
+.featured-products {
+  position: relative;
+  top: 8em;
+  height: 10em;
+}
+
+/* Products Page */
+.prod-hero-mobile{
+    background-image: url(/images/home-imgs/E36-EGM-Hero.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 30em;
+    position: relative;
+    top:8em
+}
+
+.prod-hero-dt {
+  display: none;
 }
 
 .prod-container {
   padding: 1em;
-  /* padding-top: 10em; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  position: relative;
+  top: 8em;
 }
 
 @media screen and (min-width: 760px){
-  .prod-hero {
-    padding-top: 7em;
+  /* Home Page */
+  /* Products Page */
+  .prod-hero-dt {
+    display: block;
+    position: relative;
+    top: 8em;
     height:25em;
     width: 100vw;
   }
+
+  .prod-hero-mobile {
+    display: none;
+  }
 }
 @media screen and (min-width: 1000px){
-  .prod-hero {
-    padding-top: 7em;
-    height:40em;
+  /* Home page */
+  /* Products Page */
+  .prod-hero-dt {
+    height:60em;
     width: 100vw;
   }
 }

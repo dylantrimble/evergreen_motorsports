@@ -6,16 +6,13 @@
     margin: 1em;
     height: 25em;
     width: 22em;
-    margin: 1em;
+    border-radius: .4em;
     border: .1em solid black;
-    box-shadow:  5px 5px 5px rgb(0 0 0 / 70%);
+    box-shadow: 2px 2px 2px rgba(39, 39, 39, 0.7);
+    position: relative;
+    text-align: center;
 }
 
-.prod-card:hover{
-    transform: scale(1.02);
-    transition: .5s ease;
-    box-shadow:  10px 10px 10px rgb(0 0 0 / 70%);
-}
 
 .prod-img {
     height: auto;
@@ -31,8 +28,9 @@
 .title {
     font-size: 1.8em;
 }
-h3 {
-    font-size: 1.5em;
+.prod-price {
+    font-size: 1.2em;
+    color: rgb(102, 102, 102);
 }
 
 .prod-btn {
@@ -43,4 +41,64 @@ h3 {
     width:7em;
     height:2.2em;
     z-index: 3;
+}
+
+.prod-desc {
+    padding: 0 3em 0;
+    color: rgb(104, 104, 104);
+}
+
+@media screen and (min-width: 1000px) {
+    .prod-card{
+        border: none;
+        box-shadow: none;
+    }
+    .prod-btn {
+        background-color: rgb(86, 98, 87);
+        border-radius: .3em;
+        color: whitesmoke;
+        font-size: 1.3em;
+        width: 7em;
+        height: 2.2em;
+        z-index: 3;
+        position: absolute;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        top: 80%;
+        left: 50%;
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all 0.1s ease-in-out 0s;
+        -moz-transition: all 0.1s ease-in-out 0s;
+        transition: all 0.1s ease-in-out 0s;
+    }
+    
+    .prod-card:hover .prod-btn {
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+    }
+    
+    .prod-card .overlay {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        border-radius: .4em;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+    }
+    
+    .prod-card:hover .overlay {
+        opacity: 1;
+    } 
 }
