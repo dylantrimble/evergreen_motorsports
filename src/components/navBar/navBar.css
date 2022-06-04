@@ -4,8 +4,10 @@ body{
 
 .nav-bar {
     width: 100vw;
-    padding-bottom: 0em;
     height: 9em;
+    position: fixed;
+    background-color: whitesmoke;
+    z-index: 10;
 }
 
 .icon-wrapper {

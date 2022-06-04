@@ -3,6 +3,7 @@
 body {
   text-align: center;
   overflow-x: hidden;
+  /* overflow-y: scroll; */
 }
 
 * {
@@ -12,11 +13,41 @@ body {
 html {
   /* this makes sure the padding and the border is included in the box sizing */
   box-sizing: border-box;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 html body {
   padding: 0;
   margin: 0;
   overflow-y: inherit;
+}
+.prod-hero {
+  padding-top: 8em;
+  height:20em;
+  width: 100vw;
+}
+
+.prod-container {
+  padding: 1em;
+  /* padding-top: 10em; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 760px){
+  .prod-hero {
+    padding-top: 7em;
+    height:25em;
+    width: 100vw;
+  }
+}
+@media screen and (min-width: 1000px){
+  .prod-hero {
+    padding-top: 7em;
+    height:40em;
+    width: 100vw;
+  }
 }

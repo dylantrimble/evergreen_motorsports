@@ -1,0 +1,46 @@
+.prod-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1em;
+    height: 25em;
+    width: 22em;
+    margin: 1em;
+    border: .1em solid black;
+    box-shadow:  5px 5px 5px rgb(0 0 0 / 70%);
+}
+
+.prod-card:hover{
+    transform: scale(1.02);
+    transition: .5s ease;
+    box-shadow:  10px 10px 10px rgb(0 0 0 / 70%);
+}
+
+.prod-img {
+    height: auto;
+    max-width: 14em;
+}
+
+.prod-img:hover .prod-img:after{
+    content: "Quick Add";
+    background-color: rgba(51, 51, 51, 0.392);
+    z-index: 2;
+}
+
+.title {
+    font-size: 1.8em;
+}
+h3 {
+    font-size: 1.5em;
+}
+
+.prod-btn {
+    background-color: rgb(86, 98, 87);
+    border-radius: .3em;
+    color:whitesmoke;
+    font-size: 1.3em;
+    width:7em;
+    height:2.2em;
+    z-index: 3;
+}
