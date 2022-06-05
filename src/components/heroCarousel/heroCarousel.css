@@ -1,6 +1,7 @@
 img {
     margin-top: 0;
-    max-height: 28.5em;
+    max-height: 27.5em;
+    object-fit: cover;
 }
 
 .mobile-hero{

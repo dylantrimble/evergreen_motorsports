@@ -25,7 +25,7 @@ function App() {
     }
   }
   return (
-    <div className="App">
+    <>
       <NavBar />
       <HeroCarousel />
 
@@ -38,7 +38,7 @@ function App() {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
