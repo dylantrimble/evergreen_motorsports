@@ -12,10 +12,10 @@ function NavBar() {
                     <Link to="/" className='egm-icon'></Link>
                     <section className='right-nav'>
                     <form action="" className='search-form-dt'>
-                        <input className='search search-btn' type="submit" />
+                        <input className='search search-btn' type="submit" placeholder='Search' />
                         <input className='search search-box' type="text" placeholder='What are you looking for?'/>
                     </form>
-                    <Link to="/cart" className='cart-icon'><Cart2 className='shop-cart-icon'/>(0)</Link>
+                    <Link to="/cart" className='cart-icon'><Cart2 className='shop-cart-icon'/>Cart(0)</Link>
                     </section>
                 </div>
                 <div className="nav-wrap">
@@ -41,7 +41,7 @@ function NavBar() {
                 </div>
             </nav>
             <form action="" className='search-form-mobile'>
-                        <input className='search search-btn' type="submit" />
+                        <input className='search search-btn' type="submit" placeholder='Search' />
                         <input className='search search-box' type="text" placeholder='What are you looking for?'/>
             </form>
         </>

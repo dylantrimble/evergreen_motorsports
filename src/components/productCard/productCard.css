@@ -4,8 +4,9 @@
     align-items: center;
     justify-content: space-evenly;
     margin: 1em;
+    padding: 1em;
     height: 25em;
-    width: 22em;
+    width: 15em;
     border-radius: .4em;
     border: .1em solid black;
     box-shadow: 2px 2px 2px rgba(39, 39, 39, 0.7);
@@ -13,11 +14,19 @@
     text-align: center;
 }
 
+.home-prod {
+    height: 30em;
+    width: 40em;
+    /* object-fit: cover; */
+    scroll-snap-align: start;
+}
+
 
 .prod-img {
     height: auto;
     max-width: 14em;
 }
+
 
 .prod-img:hover .prod-img:after{
     content: "Quick Add";
@@ -44,7 +53,7 @@
 }
 
 .prod-desc {
-    padding: 0 3em 0;
+    padding: 0 1em 0;
     color: rgb(104, 104, 104);
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import "./productCard.css"
 
 
-function ProductCard({title, image, id, desc, price, category}) {
+function ProductCard({title, image, id, desc, price, category, style}) {
     let shortDesc = [];
     const shrinkDesc = item => {
         shortDesc =[]
@@ -18,7 +18,7 @@ function ProductCard({title, image, id, desc, price, category}) {
 
     // console.log(shrinkDesc(desc));
   return (
-    <div key={id} id={`product-${id}`} className={`prod-card ${category}`}>
+    <div key={id} id={`product-${id}`} className={`prod-card ${category} ${style}`}>
         <div className="overlay"></div>
         <img className="prod-img" src={image} alt={title}/>
         <h2 className='title'>{title}</h2>
