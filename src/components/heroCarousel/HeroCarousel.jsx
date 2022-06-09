@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./heroCarousel.css"
 import { Carousel } from 'react-bootstrap'
-const tandemHero = "/images/home-imgs/Tandem.jpeg"
+const tandemHero = "/images/home-imgs/Tandem.png"
 const chelseaHero = "/images/home-imgs/CD-BC-Coilovers.png"
 
 function HeroCarousel() {

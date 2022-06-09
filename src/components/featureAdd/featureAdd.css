@@ -1,0 +1,150 @@
+.feature-name-container{
+    width: 100vw;
+    display: flex;
+    background-image: url("/images/prod-imgs/Work-CR2P-Alt.jpeg");
+    background-position: 0em -3em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    height: 10em;
+    z-index: 1;
+    margin: 10em 0em;
+    /* overflow-x: hidden; */
+}
+
+.inner-container {
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.865);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    padding: 1em;
+    z-index: 2;
+}
+
+.fead-text-content > p > a{
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: rgb(80, 80, 80);
+    padding: .3em;
+    border-radius: .2em;
+}
+.fead-text-content > p > a:hover{
+    color: rgba(224, 168, 0, 1);
+    box-shadow: .3em .3em .3em rgba(39, 39, 39, 0.7);
+}
+
+.inner-container > img {
+    position: relative;
+    right: 0em;
+    top: 0em;
+    padding: 0em;
+    height: 7em; 
+}
+.work-image-2{
+    display: none;
+}
+.work-image-3 {
+    display: none;
+}
+
+.fead-text-content{
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 750px) {
+    .feature-name-container{
+        margin: 12em 0em 3em;
+        background-position: 0em -17em;
+    }
+    .inner-container > img {
+        height: 10em;
+        top: -1em; 
+    }
+    .work-image-1 {
+        left: 5em;
+        z-index: 3;
+    }
+    .work-image-2{
+        display: block;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .feature-name-container{
+        height: 15em;
+        z-index: 1;
+        margin: 12em 0em 8em;
+        background-position: 0em -20em;
+    }
+    .inner-container {
+        width: 100vw;
+        height: 100%;
+        padding: 1em;
+    }
+    .inner-container > img {
+        top: -2em;
+        height: 14em; 
+    }
+    .work-image-1 {
+        left: 8em;
+    }
+    .work-image-2 {
+        display: block;
+        left: 2em;
+        z-index: 2;
+    }
+    .work-image-3 {
+        display: none;
+    }
+    .fead-text-content > h2{
+        font-size: 2.5em;
+    }
+    .fead-text-content > p{
+        font-size: 1.5em;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .feature-name-container{
+        background-position: 0em -35em;
+    }
+    .fead-text-content > h2{
+        font-size: 3.5;
+    }
+    .fead-text-content > p{
+        font-size: 2em;
+    }
+    .work-image-1 {
+        left: 15em;
+    }
+    .work-image-2 {
+        left: 10em;
+    }
+    .work-image-3 {
+        display: block;
+        left: 5em;
+        z-index: 1;
+    }
+    
+}
+@media screen and (min-width: 1500px) {
+    .feature-name-container{
+        background-position: 0em -45em;
+    }
+    .image-1 {
+        left: 25em;
+    }
+    .image-2 {
+        left: 15em;
+    }
+    .image-3 {
+        left: 5em;
+    }
+    
+}

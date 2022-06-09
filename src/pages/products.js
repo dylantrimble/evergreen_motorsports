@@ -17,7 +17,7 @@ function products() {
           <ProductCard
           title={item.title}
           image = {item.image}
-          key = {item.id}
+          id = {item.id}
           price = {item.price}
           category = {item.category}
           desc = {item.desc}

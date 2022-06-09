@@ -16,7 +16,7 @@ function ProductCard({title, image, id, desc, price, category, style}) {
         }
     }
 
-    // console.log(shrinkDesc(desc));
+    console.log(id);
   return (
     <div key={id} id={`product-${id}`} className={`prod-card ${category} ${style}`}>
         <div className="overlay"></div>

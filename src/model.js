@@ -2,6 +2,7 @@
 import prodData from "./data/products.json"
 
 export default {
+    // State
     products: prodData,
     // Thunk
     

@@ -4,6 +4,7 @@ import NavBar from './components/navBar/NavBar'
 import HeroCarousel from './components/heroCarousel/HeroCarousel';
 import { useStoreState } from "easy-peasy"
 import ProductCard from './components/productCard/ProductCard';
+import FeatureAdd from './components/featureAdd/FeatureAdd';
 
 function App() {
   const items = useStoreState(state => state.products);
@@ -38,6 +39,7 @@ function App() {
           ))}
         </div>
       </div>
+      <FeatureAdd/>
     </>
   );
 }
