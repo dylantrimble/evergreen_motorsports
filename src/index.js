@@ -11,6 +11,8 @@ import App from "./App";
 import Cart from './pages/cart';
 import Products from './pages/products'
 import Contact from "./pages/contact";
+import 'font-awesome/css/font-awesome.min.css';
+
 
 const store = createStore(model)
 

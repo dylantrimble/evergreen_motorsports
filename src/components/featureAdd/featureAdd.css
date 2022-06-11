@@ -8,7 +8,7 @@
     flex-direction: column;
     height: 10em;
     z-index: 1;
-    margin: 10em 0em;
+    margin: 10em 0em 5em;
     /* overflow-x: hidden; */
 }
 
@@ -137,14 +137,14 @@
     .feature-name-container{
         background-position: 0em -45em;
     }
-    .image-1 {
-        left: 25em;
+    .work-image-1 {
+        left: 28em;
     }
-    .image-2 {
-        left: 15em;
+    .work-image-2 {
+        left: 18em;
     }
-    .image-3 {
-        left: 5em;
+    .work-image-3 {
+        left: 8em;
     }
     
 }

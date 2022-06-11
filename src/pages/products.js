@@ -3,6 +3,7 @@ import NavBar from '../components/navBar/NavBar'
 import "../Main.css"
 import { useStoreState } from "easy-peasy"
 import ProductCard from '../components/productCard/ProductCard';
+import Footer from "../components/footer/Footer"
 
 function products() {
   const items = useStoreState(state => state.products);
@@ -24,6 +25,7 @@ function products() {
           />
         ))}
       </div>
+      <Footer/>
     </>
   )
 }

@@ -5,6 +5,7 @@ import HeroCarousel from './components/heroCarousel/HeroCarousel';
 import { useStoreState } from "easy-peasy"
 import ProductCard from './components/productCard/ProductCard';
 import FeatureAdd from './components/featureAdd/FeatureAdd';
+import Footer from './components/footer/Footer';
 
 function App() {
   const items = useStoreState(state => state.products);
@@ -40,6 +41,7 @@ function App() {
         </div>
       </div>
       <FeatureAdd/>
+      <Footer/>
     </>
   );
 }
