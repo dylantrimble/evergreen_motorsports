@@ -6,7 +6,7 @@ function cart() {
   return (
     <>
       <NavBar/>
-      <div>cart</div>
+      <h1 className='coming-soon'>Feature Coming Soon!</h1>
     </>
   )
 }

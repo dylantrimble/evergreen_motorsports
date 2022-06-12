@@ -7,7 +7,7 @@ import Footer from "../components/footer/Footer"
 
 function products() {
   const items = useStoreState(state => state.products);
-  // console.log(items);
+  console.log(items);
   return (
     <>
       <NavBar/>

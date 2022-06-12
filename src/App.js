@@ -16,7 +16,7 @@ function App() {
         <ProductCard
           title={item.title}
           image={item.image}
-          key={item.id}
+          id={item.id}
           price={item.price}
           category={item.category}
           desc={item.desc}
@@ -34,7 +34,6 @@ function App() {
       <div className='featured-products'>
         <h1>Featured Products</h1>
         <div className="feature-cont">
-
           {items.map(item => (
             featuredItemsRender(item)
           ))}
