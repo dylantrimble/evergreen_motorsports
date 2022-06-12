@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import Footer from '../components/footer/Footer'
 import NavBar from '../components/navBar/NavBar'
 import "../Main.css"
@@ -53,27 +53,33 @@ function contact() {
   };
 
   const checkPhone = (input) => {
-    if (!(input.match(phoneNumbers)) || input === ""){
+    if (!(input.match(phoneNumbers)) || input === "") {
       updateErrorMessage("Phone Number Must Only Contain Numbers and be 10 digits long");
       updatePhoneError("error-styles");
-    }else{
+    } else {
       console.log("User input valid: Phone");
       updatePhoneError("");
       updateErrorMessage("");
       return true;
     }
   }
+
   const handleSubmit = e => {
     e.preventDefault();
     // console.log([firstName, lastName, userEmail, userPhone, userComment])
-    if(checkName(firstName, updatefNameError) &&
-      checkName(lastName, updatelNameError) &&
+    if (checkName(firstName, updatefNameError) &&
+      checkName(lastName, updatelNameError,) &&
       checkComment(userComment) &&
-      checkPhone(userPhone)){
-        console.log([firstName, lastName, userEmail, userPhone, userComment])
+      checkPhone(userPhone)) {
+      console.log([firstName, lastName, userEmail, userPhone, userComment]);
+      updateComment("");
+      updateEmail("");
+      updateFirstName("");
+      updateLastName("");
+      updatePhone("");
     }
-
   }
+
 
   return (
     <>
@@ -115,14 +121,16 @@ function contact() {
               name="first-name"
               type="text" id='first-name'
               className={`contact-input ${fnameError}`}
-              placeholder='First Name'
+              value={firstName}
+              placeholder="first name"
               onChange={e => updateFirstName(e.target.value)}
             />
             <input
               name="last-name"
               type="text" id='last-name'
               className={`contact-input ${lnameError}`}
-              placeholder='Last Name'
+              value={lastName}
+              placeholder="last name"
               onChange={e => updateLastName(e.target.value)}
             />
             <input
@@ -130,7 +138,8 @@ function contact() {
               type="email"
               id='cont-email '
               className={`contact-input`}
-              placeholder='Email'
+              value={userEmail}
+              placeholder="email@email.com"
               onChange={e => updateEmail(e.target.value)}
             />
             <input
@@ -138,7 +147,8 @@ function contact() {
               type="tel"
               id='phone-number '
               className={`contact-input ${phoneError}`}
-              placeholder='phone number'
+              value={userPhone}
+              placeholder="phone number"
               onChange={e => updatePhone(e.target.value)}
             />
             <textarea
@@ -146,7 +156,8 @@ function contact() {
               id="comment"
               className={`contact-input ${commentError}`}
               cols="45" rows="5"
-              placeholder='Comments/Questoins'
+              value={userComment}
+              placeholder="Comments/Questions"
               onChange={e => updateComment(e.target.value)}
             ></textarea>
             <br />

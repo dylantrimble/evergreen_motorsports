@@ -34,9 +34,7 @@ function HeroCarousel() {
                 </Carousel.Item>
             </Carousel>
             </div>
-            <div className="mobile-hero">
-
-            </div>
+            <div id="mobile-hero"></div>
         </>
     )
 }

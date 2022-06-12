@@ -31,7 +31,7 @@ html body {
 
 .featured-products {
   position: relative;
-  top: 10em;
+  top: 13em;
   text-align: center;
   height: auto;
   padding-bottom: 3em;
@@ -54,7 +54,7 @@ html body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 24em;
+    min-height: 24em;
     position: relative;
     top:8em
 }

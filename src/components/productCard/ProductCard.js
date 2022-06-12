@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import "./productCard.css"
 import { useStoreActions, useStoreState } from 'easy-peasy'
 import { useNavigate } from "react-router-dom";
