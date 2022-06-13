@@ -3,7 +3,7 @@
         "id": 0,
         "title": "BC-Racing BR Series - e36 Sedan",
         "image": "./images/prod-imgs/BC-Racinig-Coilover-Prod.jpeg",
-        "alt_img": "./images/prod-imgs/BC-Alt-Image.webp",
+        "alt_img": "./images/prod-imgs/BC-Alt-Image.jpeg",
         "price": 1400,
         "category": "Suspension",
         "desc": "The BC Racing BR Series offers the most affordable entry into coilover suspension without sacrificing performance, comfort, build quality, vehicle height, or handling. This is done by extensively testing each vehicle then refining the coilover characteristics as many times as needed to ensure the most well-balanced and affordable aftermarket suspension conceivable.",
@@ -142,7 +142,7 @@
     {
         "id": 14,
         "title": "NRG Prisma Pizza",
-        "image": "./images/prod-imgs/NRG-Prisma-Pizza.webp",
+        "image": "./images/prod-imgs/NRG-Prisma-Pizza.png",
         "alt_img": "./images/prod-imgs/NRG-Prisma-Pizza-Alt.webp",
         "price": 425,
         "category": "Seats",
@@ -172,8 +172,8 @@
     {
         "id": 17,
         "title": "NRG Prisma Savage",
-        "image": "./images/prod-imgs/NRG-Prisma-Savage.webp",
-        "alt_img": "./images/prod-imgs/NRG-Prisma-Savage-Alt.webp",
+        "image": "./images/prod-imgs/NRG-Prisma-Savage.jpeg",
+        "alt_img": "./images/prod-imgs/NRG-Prisma-Savage-Alt.jpeg",
         "price": 425,
         "category": "Seats",
         "desc":"The Prisma offers unmatched style, comfort, and innovation with things like our double layer FRP, 5-point harness compatibility, and purple flakes color backing. Wrapped in vegan satin material and insulated with hand-picked mixed-density foam while rocking two storage pockets located on the front seat cushions, it's also the first seat to retain factory like utility and support, and at a surprisingly affordable price.",
