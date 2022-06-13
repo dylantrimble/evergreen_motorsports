@@ -232,6 +232,7 @@ html body {
 }
 .showcase-img > img {
   max-height: 14em;
+  max-width: 100%;
   padding: 1em;
 }
 .img-choices{
@@ -247,6 +248,8 @@ html body {
   height: 7em;
   margin: .5em;
   padding: .2em;
+  max-height: 100%;
+  max-width: 45%;
   border: .5px solid rgba(60, 60, 60, 0.188);
   border-radius: .3em;
 }
@@ -372,6 +375,7 @@ html body {
   }
   .showcase-img > img{
     max-height: 24em;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 1000px){
@@ -381,8 +385,6 @@ html body {
   .prod-hero-dt {
     height:60em;
     width: 100vw;
-  }
-  .prod-page-grid{
   }
 
   .filter-container > div {
