@@ -83,6 +83,7 @@ html body {
 }
 .filter-container > div{
   position: relative;
+  margin: .5em;
   padding: .5em;
   width: 7em;
   display: flex;
