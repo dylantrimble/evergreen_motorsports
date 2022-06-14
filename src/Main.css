@@ -49,7 +49,7 @@ html body {
 
 /* Products Page */
 .prod-hero-mobile{
-    background-image: url(/images/prod-imgs/BC-BR-AD.webp);
+    background-image: url(/images/prod-imgs/BC-BR-AD.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -133,7 +133,7 @@ html body {
 }
 
 .contact-heading {
-  background-image: url(/images/prod-imgs/Work-S12P-Alt.jpeg);
+  background-image: url(/images/prod-imgs/Work-S12P-Alt.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
