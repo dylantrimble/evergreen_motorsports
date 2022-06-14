@@ -5,7 +5,7 @@ import prodData from "./data/products.json"
 export default {
     // State
     products: prodData,
-    selectedItem: 8,
+    selectedItem: localStorage.getItem("prodID") || 8,
     // Thunk
     // Actions
     selectItem: action((state, id) => {

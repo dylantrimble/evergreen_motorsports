@@ -5,6 +5,9 @@ import Footer from "../components/footer/Footer"
 
 function productInfo() {
     const id = useStoreState(state => state.selectedItem);
+    localStorage.setItem("prodID", id);
+    // const id = parseInt(localStorage.getItem("prodID"))
+    console.log(id);
     const items = useStoreState(state => state.products);
     const [featuredImg, updateFeaturedImg] = useState(items[id].image);
 
