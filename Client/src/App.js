@@ -8,7 +8,7 @@ import FeatureAdd from './components/featureAdd/FeatureAdd';
 import Footer from './components/footer/Footer';
 
 function App() {
-  const items = useStoreState(state => state.products);
+  const items = useStoreState(state => state.allProducts);
 
   const featuredItemsRender = item => {
     if (item.featured) {

@@ -6,7 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import model from "./model"
-import { StoreProvider, createStore } from "easy-peasy"
+import { StoreProvider, createStore} from "easy-peasy"
 import App from "./App";
 import Cart from './pages/cart';
 import Products from './pages/products'

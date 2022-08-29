@@ -1,19 +1,45 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React, {useState} from 'react'
+import { Link, useNavigate} from "react-router-dom";
+import { useStoreState, useStoreActions } from "easy-peasy"
 import "./navBar.css"
 import { Cart2 } from 'react-bootstrap-icons';
 
 
-function NavBar() {
+function NavBar () {
+    const [userSearch, updateUserSearch] = useState("");
+    const filterItems = useStoreActions(actions => actions.filterItems)
+    const resetFilter = useStoreActions(actions => actions.resetFilter)
+    const nav = useNavigate();
+
+    const handleChange = (event) => {
+        updateUserSearch(event.target.value)
+    }
+
+    const searchProd = (e) => {
+        e.preventDefault();
+        resetFilter()
+        filterItems(userSearch)
+        localStorage.setItem("searchParam",userSearch)
+        let path = `products`;
+        let currentPath = window.location.pathname;
+        if (currentPath === "/products"){
+            console.log("Already on prod page");
+        }else{
+            console.log(path);
+            nav(path);
+        }
+    }
+
+
     return (
         <>
             <nav className='nav-bar'>
                 <div className="icon-wrapper">
                     <Link to="/" className='egm-icon'></Link>
                     <section className='right-nav'>
-                    <form action="" className='search-form-dt'>
-                        <input className='search search-btn' type="submit" placeholder='Search' />
-                        <input className='search search-box' type="text" placeholder='What are you looking for?'/>
+                    <form onSubmit={searchProd} className='search-form-dt'>
+                        <input className='search search-btn' type="submit" placeholder='Search'/>
+                        <input className='search search-box' type="text" placeholder='What are you looking for?'onChange={handleChange}/>
                     </form>
                     <Link to="/cart" className='cart-icon'><Cart2 className='shop-cart-icon'/>Cart(0)</Link>
                     </section>
@@ -40,7 +66,7 @@ function NavBar() {
                     <p className='promo-code'>Get 15% off with code "egm15" at checkout!</p>
                 </div>
             </nav>
-            <form action="" className='search-form-mobile'>
+            <form onSubmit={searchProd} className='search-form-mobile'>
                         <input className='search search-btn' type="submit" placeholder='Search' />
                         <input className='search search-box' type="text" placeholder='What are you looking for?'/>
             </form>
