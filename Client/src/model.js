@@ -1,14 +1,24 @@
-// import { thunk } from "easy-peasy";
-import { action } from "easy-peasy";
-import prodData from "./data/products.json"
+import { action, thunk } from "easy-peasy";
+// import prodData from "./data/products.json"
 
 export default {
     // State
-    products: prodData,
-    allProducts: prodData,
+    products: [],
+    allProducts: [],
     selectedItem: localStorage.getItem("prodID") || 8,
     // Thunk
+    getData: thunk(async actions => {
+        const res = await fetch("http://localhost:8080/api/all-products");
+
+        const data = await res.json();
+        console.log(data)
+        actions.initData(data)
+    }),
     // Actions
+    initData: action ((state, data) => {
+        state.allProducts = data
+        state.products = data
+    }),
     selectItem: action((state, id) => {
         state.selectedItem = id;
     }),

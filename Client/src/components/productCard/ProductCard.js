@@ -4,7 +4,7 @@ import { useStoreActions, useStoreState } from 'easy-peasy'
 import { useNavigate } from "react-router-dom";
 
 
-function ProductCard({title, image, id, desc, price, category, style}) {
+function ProductCard({title, image, id, prod_desc, price, category, style}) {
     const selectProduct = useStoreActions(actions => actions.selectItem)
     const selectedItem = useStoreState(state => state.selectedItem)
     const [click, updateClick] = useState(false)
@@ -35,14 +35,14 @@ function ProductCard({title, image, id, desc, price, category, style}) {
     // useEffect(navigate('../productInfo'), [click])
 
     // console.log(id);
-    console.log(selectedItem)
+    // console.log(selectedItem)
   return (
     <div key={id} id={`product-${id}`} className={`prod-card ${category} ${style}`}>
         <div className="overlay"></div>
         <img className="prod-img" src={image} alt={title}/>
         <h2 className='title'>{title}</h2>
         <p className='prod-price'>${price}.00</p>
-        <p className='prod-desc'>{shrinkDesc(desc)}</p>
+        <p className='prod-desc'>{shrinkDesc(prod_desc)}</p>
         <button className='prod-btn' onClick={e => handleClick(e)}>View Item</button>
     </div>
   )

@@ -1,11 +1,17 @@
-import React, {useState} from 'react'
-import { Link, useNavigate} from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import { Link, useNavigate } from "react-router-dom";
 import { useStoreState, useStoreActions } from "easy-peasy"
 import "./navBar.css"
 import { Cart2 } from 'react-bootstrap-icons';
 
 
-function NavBar () {
+function NavBar() {
+    const getData = useStoreActions(actions => actions.getData)
+    useEffect(() => {
+        console.log("fetching data")
+        getData();
+        //eslint-disable-next-line
+    }, [])
     const [userSearch, updateUserSearch] = useState("");
     const filterItems = useStoreActions(actions => actions.filterItems)
     const resetFilter = useStoreActions(actions => actions.resetFilter)
@@ -19,14 +25,14 @@ function NavBar () {
         e.preventDefault();
         resetFilter()
         filterItems(userSearch)
-        localStorage.setItem("searchParam",userSearch)
-        let path = `products`;
+        localStorage.setItem("searchParam", userSearch)
+        let path = `../products`;
         let currentPath = window.location.pathname;
-        if (currentPath === "/products"){
+        if (currentPath === "/products") {
             console.log("Already on prod page");
-        }else{
+        } else {
             console.log(path);
-            nav(path);
+            nav(path, { replace: true });
         }
     }
 
@@ -37,38 +43,38 @@ function NavBar () {
                 <div className="icon-wrapper">
                     <Link to="/" className='egm-icon'></Link>
                     <section className='right-nav'>
-                    <form onSubmit={searchProd} className='search-form-dt'>
-                        <input className='search search-btn' type="submit" placeholder='Search'/>
-                        <input className='search search-box' type="text" placeholder='What are you looking for?'onChange={handleChange}/>
-                    </form>
-                    <Link to="/cart" className='cart-icon'><Cart2 className='shop-cart-icon'/>Cart(0)</Link>
+                        <form onSubmit={searchProd} className='search-form-dt'>
+                            <input className='search search-btn' type="submit" placeholder='Search' />
+                            <input className='search search-box' type="text" placeholder='What are you looking for?' onChange={handleChange} />
+                        </form>
+                        <Link to="/cart" className='cart-icon'><Cart2 className='shop-cart-icon' />Cart(0)</Link>
                     </section>
                 </div>
                 <div className="nav-wrap">
                     <div className="menu-wrap">
-                    <input type="checkbox" className="toggler" />
-                    <div className="hamburger">
-                        <div></div>
-                    </div>
-                    <div className="menu">
-                        <div>
+                        <input type="checkbox" className="toggler" />
+                        <div className="hamburger">
+                            <div></div>
+                        </div>
+                        <div className="menu">
                             <div>
-                                <ul>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="/products">Products</Link></li>
-                                    <li><Link to="/cart">Cart</Link></li>
-                                    <li><Link to="/contact">Contact</Link></li>
-                                </ul>
+                                <div>
+                                    <ul>
+                                        <li><Link to="/">Home</Link></li>
+                                        <li><Link to="/products">Products</Link></li>
+                                        <li><Link to="/cart">Cart</Link></li>
+                                        <li><Link to="/contact">Contact</Link></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                     <p className='promo-code'>Get 15% off with code "egm15" at checkout!</p>
                 </div>
             </nav>
             <form onSubmit={searchProd} className='search-form-mobile'>
-                        <input className='search search-btn' type="submit" placeholder='Search' />
-                        <input className='search search-box' type="text" placeholder='What are you looking for?'/>
+                <input className='search search-btn' type="submit" placeholder='Search' />
+                <input className='search search-box' type="text" placeholder='What are you looking for?' onChange={handleChange} />
             </form>
         </>
     )

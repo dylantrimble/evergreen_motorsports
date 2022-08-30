@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import NavBar from '../components/navBar/NavBar'
 import "../Main.css"
 import { useStoreState, useStoreActions } from "easy-peasy"
@@ -12,20 +12,39 @@ function products() {
 
   const items = useStoreState(state => state.products);
   const resetFilter = useStoreActions(actions => actions.resetFilter);
-  const [curentPath, updateCurrentPath] = useState(window.location.pathname)
-  let param = localStorage.getItem("searchParam");
-
+  const filterItems = useStoreActions(actions => actions.filterItems)
+  // const [curentPath, updateCurrentPath] = useState(window.location.pathname)
+  const [filter, updateFilter] = useState("")
+  // Search Filter
+  const [param, updateParam] = useState(localStorage.getItem("searchParam"));
+  // Reset Search bar filter
   useEffect(() => {
-    if(param === ""){
+    resetFilter()
+    if (param === "" && filter === "") {
       resetFilter()
       console.log(param)
-    }else{
+    }else if(filter === "") {
+      resetFilter();
+    }else if (filter !== "") {
+      resetFilter();
+      localStorage.setItem("searchParam", "")
+      filterItems(filter)
+    }else if(param !== "") {
       console.log("param not empty", param)
       localStorage.setItem("searchParam", "")
+    }else {
+      resetFilter();
+      console.log(param)
     }
     // console.log("new param", param)
-  })
-  // console.log(items);
+  }, [filter, param])
+
+  // Button filter
+  const filterOption = (event) => {
+    console.log(event.target.value)
+    updateFilter(event.target.value)
+  }
+
   return (
     <>
       <NavBar />
@@ -35,7 +54,8 @@ function products() {
         <aside className='filter-container'>
           <div className='filter-options'>
             <label htmlFor="type">Filter by type:</label>
-            <select name="type" id="fbt">
+            <select name="type" id="fbt" onChange={filterOption}>
+              <option value="">All</option>
               <option value="wheels">Wheels</option>
               <option value="seats">Seats</option>
               <option value="suspension">Suspension</option>
@@ -47,8 +67,7 @@ function products() {
             <select name="type" id="fbt">
               <option value="ascending">Price (high to low)</option>
               <option value="decending">Price (low to high)</option>
-              <option value="alphabetical">Alphabetical</option>
-              <option value="type">Type</option>
+              <option value="reset">Reset</option>
             </select>
           </div>
         </aside>
@@ -60,7 +79,7 @@ function products() {
               id={item.id}
               price={item.price}
               category={item.category}
-              desc={item.desc}
+              prod_desc={item.prod_desc}
             />
           ))}
         </div>
